@@ -7,14 +7,29 @@ const homeStore = create((set) => ({
   trending: [],
   query: "",
   searching: false,
+  favorites: [],
 
   setQuery: (e) => {
     set({ query: e.target.value });
     homeStore.getState().searchCoins();
   },
+  addFavoriteCoin: (coin, index) => {
+    const favorite = homeStore.getState().favorites;
+    let newFavoritesList = [];
+    newFavoritesList = [...favorite, coin];
+    set({ favorites: newFavoritesList });
+    console.log(favorite);
+  },
+  removeFavoriteCoin: (coin) => {
+    const favorite = homeStore.getState().favorites;
+    const rm = favorite.filter((item) => item.id !== coin.id);
+    set({ favorites: rm });
+
+    console.log("asd", rm);
+  },
 
   searchCoins: debounce(async () => {
-    set({searching : true})
+    set({ searching: true });
     const { query, trending } = homeStore.getState();
     if (query.length > 2) {
       const res = await axios.get(
@@ -28,9 +43,9 @@ const homeStore = create((set) => ({
           id: coin.id,
         };
       });
-      set({ coins , searching:false});
+      set({ coins, searching: false });
     } else {
-      set({ coins: trending , searching:false});
+      set({ coins: trending, searching: false });
     }
   }, 500),
 

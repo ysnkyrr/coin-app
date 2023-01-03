@@ -67,7 +67,6 @@ export default function Detail() {
     return <>Loading</>;
   }
   const { data } = store.dataRes;
-  console.log(store.dataRes.data);
   return (
     <div>
       <Header back />

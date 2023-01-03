@@ -42,10 +42,14 @@ a {
   background-color: #111;
   color: whitesmoke;
   padding: 20px 0;
-  position: sticky;
+  position: relative;
   z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   .width {
     position: relative;
+    display: flex;
   }
   h1 {
     text-align: center;
@@ -55,7 +59,6 @@ a {
     letter-spacing: 2px;
   }
   a {
-    
     color: whitesmoke;
   }
 }
@@ -180,4 +183,32 @@ a {
     font-size: 16px;
     color: #111;
   }
+}
+.favorite {
+  align-items: center;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #666;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.head-item {
+  margin: auto;
+}
+.star-btn {
+  border: #ddd;
+  background-color: white;
+  margin-top: 7px;
+}
+.star-svg {
+  position: relative;
+  align-self: center;
+}
+.remove-btn {
+  background-color: rgb(59, 17, 17);
+  position: absolute;
+  border: #ddd;
+  color: #ddd;
 }

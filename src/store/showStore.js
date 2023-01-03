@@ -23,6 +23,7 @@ const showStore = create((set) => ({
       };
     });
     set({ graphData, dataRes });
+    console.log(dataRes)
   },
 }));
 export default showStore;

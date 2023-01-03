@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import ListItem from "../components/ListItem";
@@ -17,8 +17,12 @@ export default function Home() {
         <div className="width">
           <h2>Search For a Coin</h2>
           <div className="home-search-input">
-            <input className="home-input" type="text" value={store.query} onChange={store.setQuery} />
-            
+            <input
+              className="home-input"
+              type="text"
+              value={store.query}
+              onChange={store.setQuery}
+            />
           </div>
         </div>
       </header>
