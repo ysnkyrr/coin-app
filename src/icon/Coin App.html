@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!-- saved from url=(0026)http://localhost:3000/coin -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/coin/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+
+  
+    <title>Coin App</title>
+  <script defer="" src="./Coin App_files/bundle.js"></script><style>@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);</style><style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+input {
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  border-radius: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.width {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 92%;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  margin-top: -12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background: #606c88;
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+  color: whitesmoke;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.header .width {
+  position: relative;
+  display: flex;
+}
+.header h1 {
+  text-align: center;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.header a {
+  color: whitesmoke;
+}
+
+.home-search {
+  padding: 40px 0;
+  text-align: center;
+}
+.home-search h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.home-search input {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 0 24px;
+  line-height: 58px;
+}
+
+@keyframes rotating {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+.home-search-input {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.home-search-input .home-input {
+  text-align: center;
+}
+
+.home-cryptos {
+  padding-bottom: 50px;
+}
+.home-cryptos h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home-crypto-list {
+  border-top: 1px solid #ddd;
+}
+
+.home-crypto a {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+.home-crypto span {
+  display: block;
+}
+
+.home-crypto-image {
+  width: 50px;
+}
+
+.home-crypto-price .home-crypto-btc {
+  color: #111;
+  font-size: 20px;
+}
+.home-crypto-price .home-crypto-btc img {
+  width: 16px;
+  display: inline-block;
+  margin: -3px 5px 0 0;
+  vertical-align: middle;
+}
+.home-crypto-price .home-crypto-usd {
+  color: #666;
+  font-size: 10px;
+}
+
+.home-crypto-name {
+  flex: 1 1;
+  font-size: 20px;
+  color: #111;
+  font-weight: 600;
+}
+
+.show-header {
+  padding: 40px 0;
+  text-align: center;
+}
+.show-header h2 {
+  font-size: 32px;
+  margin-top: 22px;
+}
+.show-header img {
+  width: 80px;
+  border-radius: 50px;
+  margin: 0 auto;
+}
+
+.show-graph {
+  height: 200px;
+  width: 100%;
+}
+
+.show-details {
+  padding-top: 40px;
+  padding-bottom: 60%;
+}
+.show-details h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.show-details-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+}
+.show-details-row h3 {
+  font-size: 16px;
+  color: #111;
+}
+
+.favorite {
+  align-items: center;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #666;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.favorite-item {
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.remove-btn {
+  background-color: rgb(197, 55, 55);
+  position: static;
+  border: #ddd;
+  color: #ddd;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin-top: 12px;
+  margin-left: 35%;
+  position: absolute;
+}
+
+.head-item {
+  margin: auto;
+}
+.head-item a {
+  font-size: 16px;
+}
+
+.star-btn {
+  border: #ddd;
+  background-color: white;
+  margin-top: 22px;
+}
+
+.star-svg {
+  position: static;
+  align-self: center;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zdHlsZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0UsU0FBQTtFQUNBLFVBQUE7RUFDQSxzQkFBQTtBQUNGOztBQUNBO0VBQ0UsbUpBQUE7QUFFRjs7QUFBQTtFQUlFLG1CQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGNBQUE7RUFDQSxXQUFBO0VBQ0EsZ0JBQUE7QUFHRjs7QUFEQTtFQUNFLGVBQUE7RUFDQSxjQUFBO0FBSUY7O0FBRkE7RUFDRSxnQkFBQTtFQUNBLGNBQUE7RUFDQSxVQUFBO0FBS0Y7O0FBSEE7RUFDRSxrQkFBQTtFQUNBLE9BQUE7RUFDQSxpQkFBQTtBQU1GOztBQUhBO0VBQ0UscUJBQUE7QUFNRjs7QUFIQTtFQUNFLG1CQUFBO0VBRUEsdURBQUE7RUFFQSxpQkFBQTtFQUNBLGVBQUE7RUFDQSxrQkFBQTtFQUNBLFdBQUE7RUFDQSxhQUFBO0VBQ0EsbUJBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0VBQ0EsMkNBQUE7QUFLRjtBQUpFO0VBQ0Usa0JBQUE7RUFDQSxhQUFBO0FBTUo7QUFKRTtFQUNFLGtCQUFBO0VBQ0EsaUJBQUE7RUFDQSx5QkFBQTtFQUNBLGVBQUE7RUFDQSxtQkFBQTtBQU1KO0FBSkU7RUFDRSxpQkFBQTtBQU1KOztBQUhBO0VBQ0UsZUFBQTtFQUNBLGtCQUFBO0FBTUY7QUFKRTtFQUNFLGVBQUE7RUFDQSxtQkFBQTtBQU1KO0FBSkU7RUFDRSxzQkFBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtFQUNBLGlCQUFBO0FBTUo7O0FBSEE7RUFDRTtJQUNFLHdDQUFBO0VBTUY7RUFKQTtJQUNFLDBDQUFBO0VBTUY7QUFDRjtBQUpBO0VBQ0UsYUFBQTtFQUNBLG1CQUFBO0VBQ0Esa0JBQUE7QUFNRjtBQUpFO0VBQ0Usa0JBQUE7QUFNSjs7QUFIQTtFQUNFLG9CQUFBO0FBTUY7QUFMRTtFQUNFLGVBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7QUFPSjs7QUFKQTtFQUNFLDBCQUFBO0FBT0Y7O0FBSkU7RUFDRSxhQUFBO0VBQ0EsU0FBQTtFQUNBLG1CQUFBO0VBQ0EsZUFBQTtFQUNBLDZCQUFBO0FBT0o7QUFKRTtFQUNFLGNBQUE7QUFNSjs7QUFIQTtFQUNFLFdBQUE7QUFNRjs7QUFIRTtFQU9FLFdBQUE7RUFDQSxlQUFBO0FBQUo7QUFQSTtFQUNFLFdBQUE7RUFDQSxxQkFBQTtFQUNBLG9CQUFBO0VBQ0Esc0JBQUE7QUFTTjtBQUpFO0VBQ0UsV0FBQTtFQUNBLGVBQUE7QUFNSjs7QUFIQTtFQUNFLFNBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLGdCQUFBO0FBTUY7O0FBSkE7RUFDRSxlQUFBO0VBQ0Esa0JBQUE7QUFPRjtBQUxFO0VBQ0UsZUFBQTtFQUNBLGdCQUFBO0FBT0o7QUFMRTtFQUNFLFdBQUE7RUFDQSxtQkFBQTtFQUNBLGNBQUE7QUFPSjs7QUFKQTtFQUNFLGFBQUE7RUFDQSxXQUFBO0FBT0Y7O0FBTEE7RUFDRSxpQkFBQTtFQUNBLG1CQUFBO0FBUUY7QUFQRTtFQUNFLGVBQUE7RUFDQSxtQkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7QUFTSjs7QUFOQTtFQUNFLGFBQUE7RUFDQSxtQkFBQTtFQUNBLDhCQUFBO0VBQ0EsZUFBQTtFQUNBLDZCQUFBO0VBQ0EsV0FBQTtBQVNGO0FBUkU7RUFDRSxlQUFBO0VBQ0EsV0FBQTtBQVVKOztBQVBBO0VBQ0UsbUJBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsNkJBQUE7RUFDQSxnQkFBQTtFQUNBLHVCQUFBO0FBVUY7O0FBUkE7RUFDRSxzQkFBQTtFQUNBLFlBQUE7QUFXRjs7QUFUQTtFQUNFLGtDQUFBO0VBQ0EsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsV0FBQTtFQUNBLG1CQUFBO0VBQ0EsaUJBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7QUFZRjs7QUFWQTtFQUNFLFlBQUE7QUFhRjtBQVpFO0VBQ0UsZUFBQTtBQWNKOztBQVhBO0VBQ0UsWUFBQTtFQUNBLHVCQUFBO0VBQ0EsZ0JBQUE7QUFjRjs7QUFaQTtFQUNFLGdCQUFBO0VBQ0Esa0JBQUE7QUFlRiIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKCdodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PVJvYm90bzp3Z2h0QDMwMCZkaXNwbGF5PXN3YXAnKTtcbioge1xuICBtYXJnaW46IDA7XG4gIHBhZGRpbmc6IDA7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG59XG5ib2R5e1xuICBmb250LWZhbWlseTogc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBCbGlua01hY1N5c3RlbUZvbnQsICdTZWdvZSBVSScsIFJvYm90bywgT3h5Z2VuLCBVYnVudHUsIENhbnRhcmVsbCwgJ09wZW4gU2FucycsICdIZWx2ZXRpY2EgTmV1ZScsIHNhbnMtc2VyaWY7XG59XG5pbnB1dCB7XG4gIC13ZWJraXQtYXBwZWFyYW5jZTogbm9uZTtcbiAgLW1vei1hcHBlYXJhbmNlOiBub25lO1xuICAtbXMtYXBwZWFyYW5jZTogbm9uZTtcbiAgLW8tYXBwZWFyYW5jZTogbm9uZTtcbiAgYXBwZWFyYW5jZTogbm9uZTtcbiAgYm9yZGVyOiBub25lO1xuICBvdXRsaW5lOiBub25lO1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDEwMCU7XG4gIGJvcmRlci1yYWRpdXM6IDA7XG59XG5pbWcge1xuICBtYXgtd2lkdGg6IDEwMCU7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuLndpZHRoIHtcbiAgbWF4LXdpZHRoOiA2MDBweDtcbiAgbWFyZ2luOiAwIGF1dG87XG4gIHdpZHRoOiA5MiU7XG59XG5zdmcge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGxlZnQ6IDA7XG4gIG1hcmdpbi10b3A6IC0xMnB4O1xufVxuXG5hIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG4uaGVhZGVyIHtcbiAgYmFja2dyb3VuZDogIzYwNmM4ODtcbiAgYmFja2dyb3VuZDogLXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMzZjRjNmIsICM2MDZjODgpO1xuICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICMzZjRjNmIsICM2MDZjODgpO1xuXG4gIGNvbG9yOiB3aGl0ZXNtb2tlO1xuICBwYWRkaW5nOiAyMHB4IDA7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgei1pbmRleDogMTA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYm9yZGVyLXJhZGl1czogMjRweDtcbiAgYm94LXNoYWRvdzogcmdiYSgwLCAwLCAwLCAwLjI0KSAwcHggM3B4IDhweDtcbiAgLndpZHRoIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgfVxuICBoMSB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGNvbG9yOiB3aGl0ZXNtb2tlO1xuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gICAgZm9udC1zaXplOiAyMHB4O1xuICAgIGxldHRlci1zcGFjaW5nOiAycHg7XG4gIH1cbiAgYSB7XG4gICAgY29sb3I6IHdoaXRlc21va2U7XG4gIH1cbn1cbi5ob21lLXNlYXJjaCB7XG4gIHBhZGRpbmc6IDQwcHggMDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuXG4gIGgyIHtcbiAgICBmb250LXNpemU6IDMycHg7XG4gICAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgfVxuICBpbnB1dCB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgI2RkZDtcbiAgICBib3JkZXItcmFkaXVzOiAxMnB4O1xuICAgIHBhZGRpbmc6IDAgMjRweDtcbiAgICBsaW5lLWhlaWdodDogNThweDtcbiAgfVxufVxuQGtleWZyYW1lcyByb3RhdGluZyB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKSByb3RhdGUoMGRlZyk7XG4gIH1cbiAgdG8ge1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtNTAlKSByb3RhdGUoMzYwZGVnKTtcbiAgfVxufVxuLmhvbWUtc2VhcmNoLWlucHV0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuXG4gIC5ob21lLWlucHV0IHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIH1cbn1cbi5ob21lLWNyeXB0b3Mge1xuICBwYWRkaW5nLWJvdHRvbTogNTBweDtcbiAgaDIge1xuICAgIGZvbnQtc2l6ZTogMThweDtcbiAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICB9XG59XG4uaG9tZS1jcnlwdG8tbGlzdCB7XG4gIGJvcmRlci10b3A6IDFweCBzb2xpZCAjZGRkO1xufVxuLmhvbWUtY3J5cHRvIHtcbiAgYSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBnYXA6IDMwcHg7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBwYWRkaW5nOiAyMHB4IDA7XG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNkZGQ7XG4gIH1cblxuICBzcGFuIHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgfVxufVxuLmhvbWUtY3J5cHRvLWltYWdlIHtcbiAgd2lkdGg6IDUwcHg7XG59XG4uaG9tZS1jcnlwdG8tcHJpY2Uge1xuICAuaG9tZS1jcnlwdG8tYnRjIHtcbiAgICBpbWcge1xuICAgICAgd2lkdGg6IDE2cHg7XG4gICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgICBtYXJnaW46IC0zcHggNXB4IDAgMDtcbiAgICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gICAgfVxuICAgIGNvbG9yOiAjMTExO1xuICAgIGZvbnQtc2l6ZTogMjBweDtcbiAgfVxuICAuaG9tZS1jcnlwdG8tdXNkIHtcbiAgICBjb2xvcjogIzY2NjtcbiAgICBmb250LXNpemU6IDEwcHg7XG4gIH1cbn1cbi5ob21lLWNyeXB0by1uYW1lIHtcbiAgZmxleDogMTtcbiAgZm9udC1zaXplOiAyMHB4O1xuICBjb2xvcjogIzExMTtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbn1cbi5zaG93LWhlYWRlciB7XG4gIHBhZGRpbmc6IDQwcHggMDtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuXG4gIGgyIHtcbiAgICBmb250LXNpemU6IDMycHg7XG4gICAgbWFyZ2luLXRvcDogMjJweDtcbiAgfVxuICBpbWcge1xuICAgIHdpZHRoOiA4MHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDUwcHg7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gIH1cbn1cbi5zaG93LWdyYXBoIHtcbiAgaGVpZ2h0OiAyMDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG4uc2hvdy1kZXRhaWxzIHtcbiAgcGFkZGluZy10b3A6IDQwcHg7XG4gIHBhZGRpbmctYm90dG9tOiA2MCU7XG4gIGgyIHtcbiAgICBmb250LXNpemU6IDE4cHg7XG4gICAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbWFyZ2luLWJvdHRvbTogMjBweDtcbiAgfVxufVxuLnNob3ctZGV0YWlscy1yb3cge1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIHBhZGRpbmc6IDIwcHggMDtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNkZGQ7XG4gIGNvbG9yOiAjNjY2O1xuICBoMyB7XG4gICAgZm9udC1zaXplOiAxNnB4O1xuICAgIGNvbG9yOiAjMTExO1xuICB9XG59XG4uZmF2b3JpdGUge1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiA1cHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjNjY2O1xuICBtYXJnaW4tdG9wOiAyMHB4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbn1cbi5mYXZvcml0ZS1pdGVtIHtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbiAgbWFyZ2luOiBhdXRvO1xufVxuLnJlbW92ZS1idG4ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTk3LCA1NSwgNTUpO1xuICBwb3NpdGlvbjogc3RhdGljO1xuICBib3JkZXI6ICNkZGQ7XG4gIGNvbG9yOiAjZGRkO1xuICBib3JkZXItcmFkaXVzOiAxMnB4O1xuICBwYWRkaW5nOiA1cHggMTBweDtcbiAgbWFyZ2luLXRvcDogMTJweDtcbiAgbWFyZ2luLWxlZnQ6IDM1JTtcbiAgcG9zaXRpb246IGFic29sdXRlO1xufVxuLmhlYWQtaXRlbSB7XG4gIG1hcmdpbjogYXV0bztcbiAgYSB7XG4gICAgZm9udC1zaXplOiAxNnB4O1xuICB9XG59XG4uc3Rhci1idG4ge1xuICBib3JkZXI6ICNkZGQ7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBtYXJnaW4tdG9wOiAyMnB4O1xufVxuLnN0YXItc3ZnIHtcbiAgcG9zaXRpb246IHN0YXRpYztcbiAgYWxpZ24tc2VsZjogY2VudGVyO1xuICBcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+  <body cz-shortcut-listen="true">
+    <div id="root"><div class="home"><header class="header"><div class="width"><a href="http://localhost:3000/coin"><svg xmlns="http://www.w3.org/2000/svg" wiewbox="0 0 48 48" width="24"><path fill="currentColor" d="M28.05 36 16 23.95 28.05 11.9l2.15 2.15-9.9 9.9 9.9 9.9Z"></path></svg></a><h1 class="head-item"><a href="http://localhost:3000/coin">Taze BT Task</a></h1><h1 class="head-item"><a href="http://localhost:3000/coin/favorites">Favorites</a></h1></div></header><header class="home-search"><div class="width"><h2>Search For a Coin</h2><div class="home-search-input"><input class="home-input" type="text" value=""></div></div></header><div class="home-cryptos"><div class="width"><h2>Trending Coins</h2><div class="home-crypto-list"><div class="home-crypto"><span><button class="star-btn"><svg class="star-svg" version="1.1" id="svg4619" fill="#2222" style="fill: rgb(255, 208, 0);"><path id="path4749-2-8-2" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5 l5,3.5l-2-6l4-3.5h-5L7.5,0z"></path></svg></button></span><a class="coin-list-link" href="http://localhost:3000/coin/bonk"><span class="home-crypto-image"><img src="./Coin App_files/bonk.jpg" alt=""></span><span class="home-crypto-name">Bonk</span><span class="home-crypto-price"><span class="home-crypto-btc"><img class="btc-image" src="./Coin App_files/bitcoin.webp">0.00000000014 BTC</span><span class="home-crypto-usd">(0.00000231086 USD)</span></span></a></div><div class="home-crypto"><span><button class="star-btn"><svg class="star-svg" version="1.1" id="svg4619" fill="#2222" style="fill: rgb(255, 208, 0);"><path id="path4749-2-8-2" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5 l5,3.5l-2-6l4-3.5h-5L7.5,0z"></path></svg></button></span><a class="coin-list-link" href="http://localhost:3000/coin/samoyedcoin"><span class="home-crypto-image"><img src="./Coin App_files/IXeEj5e.png" alt=""></span><span class="home-crypto-name">Samoyedcoin</span><span class="home-crypto-price"><span class="home-crypto-btc"><img class="btc-image" src="./Coin App_files/bitcoin.webp">0.00000020209 BTC</span><span class="home-crypto-usd">(0.00340412788 USD)</span></span></a></div><div class="home-crypto"><span><button class="star-btn"><svg class="star-svg" version="1.1" id="svg4619" fill="#2222" style="fill: rgb(255, 208, 0);"><path id="path4749-2-8-2" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5 l5,3.5l-2-6l4-3.5h-5L7.5,0z"></path></svg></button></span><a class="coin-list-link" href="http://localhost:3000/coin/solana"><span class="home-crypto-image"><img src="./Coin App_files/solana.png" alt=""></span><span class="home-crypto-name">Solana</span><span class="home-crypto-price"><span class="home-crypto-btc"><img class="btc-image" src="./Coin App_files/bitcoin.webp">0.00081803377 BTC</span><span class="home-crypto-usd">(13.77920622224 USD)</span></span></a></div><div class="home-crypto"><span><button class="star-btn"><svg class="star-svg" version="1.1" id="svg4619" fill="#2222" style="fill: rgb(221, 221, 221);"><path id="path4749-2-8-2" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5 l5,3.5l-2-6l4-3.5h-5L7.5,0z"></path></svg></button></span><a class="coin-list-link" href="http://localhost:3000/coin/evmos"><span class="home-crypto-image"><img src="./Coin App_files/evmos.png" alt=""></span><span class="home-crypto-name">Evmos</span><span class="home-crypto-price"><span class="home-crypto-btc"><img class="btc-image" src="./Coin App_files/bitcoin.webp">0.00002082411 BTC</span><span class="home-crypto-usd">(0.35076754916 USD)</span></span></a></div><div class="home-crypto"><span><button class="star-btn"><svg class="star-svg" version="1.1" id="svg4619" fill="#2222" style="fill: rgb(221, 221, 221);"><path id="path4749-2-8-2" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5 l5,3.5l-2-6l4-3.5h-5L7.5,0z"></path></svg></button></span><a class="coin-list-link" href="http://localhost:3000/coin/apollo"><span class="home-crypto-image"><img src="./Coin App_files/NxxI4VuS.png" alt=""></span><span class="home-crypto-name">Apollo</span><span class="home-crypto-price"><span class="home-crypto-btc"><img class="btc-image" src="./Coin App_files/bitcoin.webp">0.00000003254 BTC</span><span class="home-crypto-usd">(0.00054804652 USD)</span></span></a></div><div class="home-crypto"><span><button class="star-btn"><svg class="star-svg" version="1.1" id="svg4619" fill="#2222" style="fill: rgb(221, 221, 221);"><path id="path4749-2-8-2" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5 l5,3.5l-2-6l4-3.5h-5L7.5,0z"></path></svg></button></span><a class="coin-list-link" href="http://localhost:3000/coin/gmx"><span class="home-crypto-image"><img src="./Coin App_files/arbit.png" alt=""></span><span class="home-crypto-name">GMX</span><span class="home-crypto-price"><span class="home-crypto-btc"><img class="btc-image" src="./Coin App_files/bitcoin.webp">0.00245965596 BTC</span><span class="home-crypto-usd">(41.43118283027 USD)</span></span></a></div><div class="home-crypto"><span><button class="star-btn"><svg class="star-svg" version="1.1" id="svg4619" fill="#2222" style="fill: rgb(221, 221, 221);"><path id="path4749-2-8-2" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5 l5,3.5l-2-6l4-3.5h-5L7.5,0z"></path></svg></button></span><a class="coin-list-link" href="http://localhost:3000/coin/xen-crypto"><span class="home-crypto-image"><img src="./Coin App_files/Xen.jpeg" alt=""></span><span class="home-crypto-name">XEN Crypto</span><span class="home-crypto-price"><span class="home-crypto-btc"><img class="btc-image" src="./Coin App_files/bitcoin.webp">0.00000000014 BTC</span><span class="home-crypto-usd">(0.00000230995 USD)</span></span></a></div><div class="home-crypto"><span><button class="star-btn"><svg class="star-svg" version="1.1" id="svg4619" fill="#2222" style="fill: rgb(221, 221, 221);"><path id="path4749-2-8-2" d="M7.5,0l-2,5h-5l4,3.5l-2,6l5-3.5 l5,3.5l-2-6l4-3.5h-5L7.5,0z"></path></svg></button></span><a class="coin-list-link" href="http://localhost:3000/coin/aptos"><span class="home-crypto-image"><img src="./Coin App_files/aptos_round.png" alt=""></span><span class="home-crypto-name">Aptos</span><span class="home-crypto-price"><span class="home-crypto-btc"><img class="btc-image" src="./Coin App_files/bitcoin.webp">0.00023548724 BTC</span><span class="home-crypto-usd">(3.96661769796 USD)</span></span></a></div></div></div></div></div></div>
+    
+  
+
+</body></html>

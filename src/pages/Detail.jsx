@@ -99,8 +99,8 @@ export default function Detail() {
                   <Area
                     type="monotone"
                     dataKey="Price"
-                    stroke="#8884d8"
-                    fill="#8884d8"
+                    stroke="#111"
+                    fill="#aaa"
                   />
                 </AreaChart>
               </ResponsiveContainer>

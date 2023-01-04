@@ -7,7 +7,7 @@ const showStore = create((set) => ({
   fetchData: async (id) => {
     const [graphRes, dataRes] = await Promise.all([
       axios.get(
-        `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=121`
+        `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=7`
       ),
       axios.get(
         `https://api.coingecko.com/api/v3/coins/${id}?localization=false&market_data=true`

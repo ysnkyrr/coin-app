@@ -1,4 +1,5 @@
 import axios from "axios";
+import { json } from "react-router-dom";
 import create from "zustand";
 import debounce from "../helpers/debounce";
 
@@ -7,26 +8,26 @@ const homeStore = create((set) => ({
   trending: [],
   query: "",
   searching: false,
-  favorites: [],
-
+  favorites: localStorage.getItem("favCoin") ? JSON.parse(localStorage.getItem("favCoin")) : [],
+  
   setQuery: (e) => {
     set({ query: e.target.value });
     homeStore.getState().searchCoins();
   },
-  addFavoriteCoin: (coin, index) => {
+  addFavoriteCoin: (coin) => {
     const favorite = homeStore.getState().favorites;
     let newFavoritesList = [];
     newFavoritesList = [...favorite, coin];
     set({ favorites: newFavoritesList });
     console.log(favorite);
+    
   },
   removeFavoriteCoin: (coin) => {
     const favorite = homeStore.getState().favorites;
     const rm = favorite.filter((item) => item.id !== coin.id);
     set({ favorites: rm });
-
-    console.log("asd", rm);
   },
+  
 
   searchCoins: debounce(async () => {
     set({ searching: true });

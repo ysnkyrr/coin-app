@@ -20,7 +20,7 @@ export default function Header(back) {
           </Link>
         )}
         <h1 className="head-item">
-          <Link to="/">Taze BT Task</Link>
+          <Link to="/">Coin App</Link>
         </h1>
         <h1 className="head-item">
           <Link to="/favorites">Favorites</Link>

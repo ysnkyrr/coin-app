@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.body {
+body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -39,7 +40,10 @@ a {
 }
 
 .header {
-  background-color: #111;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);
+  background: linear-gradient(to right, #3f4c6b, #606c88);
+
   color: whitesmoke;
   padding: 20px 0;
   position: relative;
@@ -47,6 +51,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   .width {
     position: relative;
     display: flex;
@@ -111,6 +117,7 @@ a {
     display: flex;
     gap: 30px;
     align-items: center;
+    justify-content: space-between;
     padding: 20px 0;
     border-bottom: 1px solid #ddd;
   }
@@ -119,8 +126,15 @@ a {
     display: block;
   }
 }
+.home-crypto-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
 .home-crypto-image {
   width: 50px;
+  margin-right: 6px;
 }
 .home-crypto-price {
   .home-crypto-btc {
@@ -131,16 +145,16 @@ a {
       vertical-align: middle;
     }
     color: #111;
-    font-size: 20px;
+    font-size: 10px;
   }
   .home-crypto-usd {
     color: #666;
-    font-size: 10px;
+    font-size: 14px;
+    margin-bottom: 3px;
   }
 }
 .home-crypto-name {
-  flex: 1;
-  font-size: 20px;
+  font-size: 14px;
   color: #111;
   font-weight: 600;
 }
@@ -193,22 +207,45 @@ a {
   margin-top: 20px;
   justify-content: center;
 }
+.favorite-item {
+  box-sizing: border-box;
+  margin: auto;
+  border-bottom: 1px solid #111;
+}
+.favorite-coin-list-link{
+  display: flex;
+  width: 50%;
+  align-items: flex-start;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  text-align: center;
+}
 
+.remove-btn {
+  background-color: rgb(197, 55, 55);
+  position: static;
+  border: #ddd;
+  color: #ddd;
+  border-radius: 12px;
+  padding: 5px 10px;
+  margin-top: 12px;
+  margin-left: 35%;
+  position: absolute;
+}
 .head-item {
   margin: auto;
+  a {
+    font-size: 16px;
+  }
 }
 .star-btn {
   border: #ddd;
   background-color: white;
-  margin-top: 7px;
+  width: 15px;
+  height: 15px;
+  position: relative;
 }
 .star-svg {
-  position: relative;
-  align-self: center;
-}
-.remove-btn {
-  background-color: rgb(59, 17, 17);
-  position: absolute;
-  border: #ddd;
-  color: #ddd;
+  position: sticky;
+  margin-top: 5px;
 }
