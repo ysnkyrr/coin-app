@@ -7,7 +7,6 @@ export default function Favorites() {
   const store = homeStore();
   const data = store.favorites;
 
-  console.log(data);
 
   useEffect(() => {
     localStorage.removeItem("favCoin");

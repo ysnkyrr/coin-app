@@ -8,8 +8,10 @@ const homeStore = create((set) => ({
   trending: [],
   query: "",
   searching: false,
-  favorites: localStorage.getItem("favCoin") ? JSON.parse(localStorage.getItem("favCoin")) : [],
-  
+  favorites: localStorage.getItem("favCoin")
+    ? JSON.parse(localStorage.getItem("favCoin"))
+    : [],
+
   setQuery: (e) => {
     set({ query: e.target.value });
     homeStore.getState().searchCoins();
@@ -19,15 +21,12 @@ const homeStore = create((set) => ({
     let newFavoritesList = [];
     newFavoritesList = [...favorite, coin];
     set({ favorites: newFavoritesList });
-    console.log(favorite);
-    
   },
   removeFavoriteCoin: (coin) => {
     const favorite = homeStore.getState().favorites;
     const rm = favorite.filter((item) => item.id !== coin.id);
     set({ favorites: rm });
   },
-  
 
   searchCoins: debounce(async () => {
     set({ searching: true });
@@ -68,7 +67,6 @@ const homeStore = create((set) => ({
         priceUsd: (coin.item.price_btc * btcPrice).toFixed(11),
       };
     });
-    console.log(coins);
     set({ coins, trending: coins });
   },
 }));

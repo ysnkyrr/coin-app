@@ -8,7 +8,6 @@ import "./style.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-
   <BrowserRouter basename={"/coin"}>
     <React.StrictMode>
       <Routes>
