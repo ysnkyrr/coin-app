@@ -51,8 +51,10 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-radius: 24px;
+  border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 70px;
+  align-items: center;
   .width {
     position: relative;
     display: flex;
